@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title">
+  <title id="title">Pexo Market</title>
+  <defs>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7600"/>
+      <stop offset="1" stop-color="#f04400"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff333"/>
+      <stop offset="1" stop-color="#ffb900"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="name-curve" d="M 43 216 Q 160 302 277 216"/>
+  </defs>
+  <circle cx="160" cy="160" r="151" fill="#fffdf7" stroke="#24100a" stroke-width="9"/>
+  <circle cx="160" cy="160" r="143" fill="none" stroke="url(#orange)" stroke-width="5"/>
+  <g transform="translate(64 20) scale(1.5)" filter="url(#shadow)" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#24100a" stroke-width="8">
+      <path d="M12 17h14l13 67h68l15-50H37"/>
+      <path d="M45 47h66M49 62h57M53 77h48M69 47l-3 30m26-30-4 30"/>
+      <path d="M40 84h67"/>
+    </g>
+    <g fill="url(#orange)" stroke="#24100a" stroke-width="5">
+      <path d="M12 17h14l13 67h68l15-50H37"/>
+      <path d="M45 47h66M49 62h57M53 77h48M69 47l-3 30m26-30-4 30" fill="none" stroke="#ff6600" stroke-width="5"/>
+      <path d="M40 84h67"/>
+      <circle cx="59" cy="106" r="8"/>
+      <circle cx="99" cy="106" r="8"/>
+    </g>
+  </g>
+  <text fill="url(#gold)" stroke="#24100a" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill" font-family="Manrope, Arial Black, sans-serif" font-size="31" font-weight="1000" text-anchor="middle" filter="url(#shadow)">
+    <textPath href="#name-curve" startOffset="50%" textLength="244" lengthAdjust="spacingAndGlyphs">PEXO MARKET</textPath>
+  </text>
+</svg>
