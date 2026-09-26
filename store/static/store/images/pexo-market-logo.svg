@@ -1,45 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 768" role="img" aria-labelledby="title">
   <title id="title">Pexo Market</title>
   <defs>
-    <linearGradient id="cart" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ff7900"/>
-      <stop offset="1" stop-color="#f04400"/>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8200"/>
+      <stop offset=".55" stop-color="#ff5a00"/>
+      <stop offset="1" stop-color="#ed3500"/>
     </linearGradient>
-    <linearGradient id="word" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff43b"/>
-      <stop offset="1" stop-color="#ffb900"/>
+    <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff93c"/>
+      <stop offset=".58" stop-color="#ffdf00"/>
+      <stop offset="1" stop-color="#ffae00"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
-      <feOffset dy="10"/>
-      <feComponentTransfer><feFuncA type="linear" slope=".32"/></feComponentTransfer>
+    <filter id="shadow" x="-.12" y="-.2" width="1.3" height="1.5">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dx="5" dy="12"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow" x="-.2" y="-.2" width="1.4" height="1.4">
+      <feGaussianBlur stdDeviation="7"/>
     </filter>
   </defs>
   <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
-    <g stroke="#24100a" stroke-width="58">
-      <path d="M391 144 313 96q-35-22-58 10-23 32 14 56l111 70v242q0 24 24 24h296q22 0 31-22l79-190q11-27-19-27H393"/>
-      <path d="M394 292H285M394 356H247M394 420H208M394 484H170M414 497h269"/>
-      <path d="M469 270h291M465 355h260M442 440h245M548 271l-21 169m120-169-19 169m118-169-21 169"/>
-      <path d="M469 509v17m221-17v17"/>
+    <g stroke="#210d09" stroke-width="54">
+      <path d="M353 149 285 108q-43-25-69 12-26 37 17 64l102 64v220q0 35 36 35h313q31 0 43-30l92-217q12-30-22-30H340"/>
+      <path d="M338 287H236M338 354H190M338 421H145M338 488H100M371 503h307"/>
+      <path d="M411 282h352M405 365h329M394 448h302M512 282l-20 166m137-166-21 166m137-166-25 166"/>
     </g>
-    <g stroke="url(#cart)" stroke-width="39">
-      <path d="M391 144 313 96q-35-22-58 10-23 32 14 56l111 70v242q0 24 24 24h296q22 0 31-22l79-190q11-27-19-27H393"/>
-      <path d="M394 292H285M394 356H247M394 420H208M394 484H170M414 497h269"/>
-      <path d="M469 270h291M465 355h260M442 440h245M548 271l-21 169m120-169-19 169m118-169-21 169"/>
-      <path d="M469 509v17m221-17v17"/>
+    <g stroke="url(#orange)" stroke-width="33">
+      <path d="M353 149 285 108q-43-25-69 12-26 37 17 64l102 64v220q0 35 36 35h313q31 0 43-30l92-217q12-30-22-30H340"/>
+      <path d="M338 287H236M338 354H190M338 421H145M338 488H100M371 503h307"/>
+      <path d="M411 282h352M405 365h329M394 448h302M512 282l-20 166m137-166-21 166m137-166-25 166"/>
     </g>
-    <g fill="#fffdf7" stroke="#24100a" stroke-width="28">
-      <circle cx="465" cy="555" r="47"/>
-      <circle cx="690" cy="555" r="47"/>
+    <g fill="#fffdf7" stroke="#210d09" stroke-width="26">
+      <circle cx="422" cy="584" r="48"/>
+      <circle cx="671" cy="584" r="48"/>
     </g>
-    <g fill="url(#cart)" stroke="url(#cart)" stroke-width="12">
-      <circle cx="465" cy="555" r="31"/>
-      <circle cx="690" cy="555" r="31"/>
+    <g fill="url(#orange)" stroke="#210d09" stroke-width="13">
+      <circle cx="422" cy="584" r="32"/>
+      <circle cx="671" cy="584" r="32"/>
     </g>
+    <path d="M408 272h343" stroke="#fff4bb" stroke-width="8" opacity=".9"/>
   </g>
-  <g filter="url(#shadow)" fill="url(#word)" stroke="#24100a" stroke-width="15" stroke-linejoin="round" paint-order="stroke fill" font-family="Manrope, Arial Black, sans-serif" font-weight="1000" text-anchor="middle">
-    <text x="512" y="664" font-size="130" letter-spacing="2">Pexo</text>
-    <text x="512" y="758" font-size="118" letter-spacing="2">Market</text>
+  <g filter="url(#shadow)" font-family="Arial Black, Manrope, sans-serif" font-weight="1000" text-anchor="middle" paint-order="stroke fill" stroke-linejoin="round">
+    <text x="1330" y="410" fill="url(#yellow)" stroke="#210d09" stroke-width="35" font-size="390" letter-spacing="-5">PEXO</text>
+    <text x="1325" y="680" fill="url(#yellow)" stroke="#210d09" stroke-width="31" font-size="275" letter-spacing="-3">MARKET</text>
+    <text x="1330" y="398" fill="none" stroke="#fff8ba" stroke-width="5" font-size="390" letter-spacing="-5" opacity=".9">PEXO</text>
+    <text x="1325" y="668" fill="none" stroke="#fff8ba" stroke-width="5" font-size="275" letter-spacing="-3" opacity=".9">MARKET</text>
   </g>
 </svg>
