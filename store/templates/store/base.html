@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f04400">
+  <link rel="icon" type="image/svg+xml" href="{% static 'store/images/pexo-market-icon.svg' %}">
+  <title>{% block title %}Pexo Market | Good finds, every day{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="utility-bar"><div class="site-width utility-inner"><span>Thoughtful picks. Fair prices. Delivered with care.</span><span>Need a hand? <a href="mailto:hello@pymart.example">Contact us</a></span></div></div>
+  <header class="site-header">
+    <div class="site-width header-main">
+      <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button>
+      <a class="brand" href="{% url 'store:home' %}" aria-label="Pexo Market home"><img class="brand-logo" src="{% static 'store/images/pexo-market-logo.svg' %}" alt="Pexo Market"></a>
+      <form class="search-form" action="{% url 'store:products' %}" method="get" role="search">
+        <label class="sr-only" for="site-search">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="What are you looking for?" value="{{ request.GET.q|default:'' }}">
+        <button type="submit" aria-label="Search">Search <span aria-hidden="true">↗</span></button>
+      </form>
+      <nav class="header-actions" aria-label="Account and cart">
+        {% if user.is_authenticated %}
+          <a class="account-link" href="{% url 'store:profile' %}"><span class="action-kicker">Hello, {{ user.first_name|default:user.username }}</span><strong>Your account</strong></a>
+        {% else %}
+          <a class="account-link" href="{% url 'store:login' %}"><span class="action-kicker">Welcome</span><strong>Sign in</strong></a>
+        {% endif %}
+        <a class="cart-link" href="{% url 'store:cart' %}" aria-label="Shopping cart, {{ cart_count }} items"><span class="cart-icon" aria-hidden="true">▱</span><span class="cart-count">{{ cart_count }}</span><strong>Cart</strong></a>
+      </nav>
+    </div>
+    <div class="nav-strip" data-mobile-nav>
+      <div class="site-width nav-inner">
+        <a class="browse-link" href="{% url 'store:products' %}"><span aria-hidden="true">☰</span> Browse all</a>
+        <nav aria-label="Shop departments">
+          {% for category in nav_categories %}<a href="{% url 'store:products' %}?category={{ category.slug }}">{{ category.name }}</a>{% endfor %}
+          <a href="{% url 'store:products' %}?sort=newest">Just in</a>
+        </nav>
+        <span class="delivery-note">Free delivery over ₹999</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    {% if messages %}<div class="site-width message-stack" aria-live="polite">{% for message in messages %}<div class="message message-{{ message.tags }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="site-width footer-main"><a class="brand brand-footer" href="{% url 'store:home' %}" aria-label="Pexo Market home"><img class="brand-logo" src="{% static 'store/images/pexo-market-logo.svg' %}" alt="Pexo Market"></a><p>Good finds for the everyday. Curated for curious homes, busy lives, and everything in between.</p><nav aria-label="Footer"><a href="{% url 'store:products' %}">Shop all</a>{% if user.is_authenticated %}<a href="{% url 'store:orders' %}">Your orders</a>{% else %}<a href="{% url 'store:signup' %}">Create an account</a>{% endif %}<a href="/admin/">Store admin</a></nav></div>
+    <div class="site-width footer-bottom"><span>© {% now "Y" %} Pexo Market</span><span>Made for the little things that make a day.</span></div>
+  </footer>
+  <script src="{% static 'store/js/script.js' %}" defer></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>
