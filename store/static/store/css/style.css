@@ -32,9 +32,13 @@ img { display: block; max-width: 100%; }
 .utility-inner { min-height: 32px; display: flex; align-items: center; justify-content: space-between; }
 .utility-inner a { color: var(--lime); }
 .site-header { position: relative; z-index: 4; background: var(--white); }
-.header-main { display: grid; grid-template-columns: 120px minmax(240px, 1fr) 220px; align-items: center; gap: 34px; min-height: 106px; }
-.brand { display: inline-flex; align-items: center; width: max-content; color: var(--forest); }
-.brand-logo { display: block; width: 100px; height: 100px; object-fit: contain; }
+.header-main { display: grid; grid-template-columns: 190px minmax(240px, 1fr) 220px; align-items: center; gap: 24px; min-height: 92px; }
+.brand { display: inline-flex; align-items: center; width: max-content; gap: 9px; color: var(--forest); }
+.brand-emblem { width: 58px; height: 58px; display: grid; flex: 0 0 auto; place-items: center; overflow: hidden; border: 3px solid #f45a12; border-radius: 50%; background: #fff4c4; box-shadow: 0 2px 0 #32140b; }
+.brand-emblem img { width: 45px; height: 45px; object-fit: contain; }
+.brand-name { display: flex; flex-direction: column; color: #ffca05; font-family: var(--display); font-weight: 900; line-height: .92; -webkit-text-stroke: 1px #24100a; text-shadow: 1px 2px 0 #24100a, 2px 3px 0 rgba(36,16,10,.38); }
+.brand-name strong { font-size: 21px; }
+.brand-name > span { margin-top: 4px; font-size: 14px; }
 .search-form { display: flex; height: 44px; border: 1px solid #cbd2cb; border-radius: 4px; overflow: hidden; background: #fafbf8; }
 .search-form:focus-within { outline: 2px solid var(--forest); outline-offset: 2px; }
 .search-form input { min-width: 0; flex: 1; border: 0; outline: 0; padding: 0 14px; background: transparent; color: var(--ink); font-size: 13px; }
@@ -145,7 +149,10 @@ h1, h2, h3, p { margin-top: 0; }
 
 .site-footer { background: var(--forest-deep); color: #e8ede7; }
 .footer-main { min-height: 150px; display: grid; grid-template-columns: 180px 1fr auto; align-items: center; gap: 35px; }
-.brand-footer .brand-logo { width: 125px; height: 125px; }
+.brand-footer .brand-emblem { width: 68px; height: 68px; }
+.brand-footer .brand-emblem img { width: 53px; height: 53px; }
+.brand-footer .brand-name strong { font-size: 24px; }
+.brand-footer .brand-name > span { font-size: 16px; }
 .footer-main p { max-width: 360px; margin: 0; color: #b9c7bb; font-size: 11px; }
 .footer-main nav { display: flex; gap: 20px; }
 .footer-main nav a { color: #e4ece2; font-size: 10px; }
@@ -309,7 +316,7 @@ h1, h2, h3, p { margin-top: 0; }
 
 @media (max-width: 1000px) {
   .site-width { width: min(100% - 40px, 900px); }
-  .header-main { grid-template-columns: 110px minmax(180px, 1fr) 175px; gap: 18px; }
+  .header-main { grid-template-columns: 175px minmax(180px, 1fr) 175px; gap: 16px; }
   .header-actions { gap: 14px; }
   .nav-inner nav { gap: 15px; }
   .hero-layout { min-height: 440px; grid-template-columns: .9fr 1.1fr; }
@@ -329,20 +336,27 @@ h1, h2, h3, p { margin-top: 0; }
   .utility-inner > span:first-child { max-width: 60%; }
   .utility-inner > span:last-child { font-size: 0; }
   .utility-inner > span:last-child a { font-size: 9px; }
-  .header-main { grid-template-columns: 30px 1fr auto; gap: 11px; min-height: 78px; }
+  .header-main { grid-template-columns: 30px minmax(0, 1fr) auto; gap: 8px; min-height: 68px; }
   .menu-toggle { width: 30px; height: 34px; display: flex; flex-direction: column; justify-content: center; gap: 4px; border: 0; padding: 5px; background: transparent; }
   .menu-toggle span { width: 19px; height: 2px; background: var(--forest); }
-  .brand-logo { width: 68px; height: 68px; }
-  .brand-footer .brand-logo { width: 88px; height: 88px; }
+  .brand { gap: 6px; }
+  .brand-emblem { width: 43px; height: 43px; border-width: 2px; }
+  .brand-emblem img { width: 34px; height: 34px; }
+  .brand-name strong { font-size: 15px; }
+  .brand-name > span { margin-top: 2px; font-size: 10px; }
+  .brand-footer .brand-emblem { width: 55px; height: 55px; }
+  .brand-footer .brand-emblem img { width: 44px; height: 44px; }
+  .brand-footer .brand-name strong { font-size: 20px; }
+  .brand-footer .brand-name > span { font-size: 13px; }
   .header-main { position: relative; }
-  .search-form { position: absolute; top: 78px; left: 0; right: 0; height: 39px; }
+  .search-form { position: absolute; top: 68px; left: 0; right: 0; height: 39px; }
   .search-form button { width: 78px; }
   .header-actions { gap: 12px; }
   .account-link { display: none; }
   .cart-link strong { font-size: 10px; }
   .cart-icon { font-size: 26px; }
   .nav-strip { display: none; }
-  .nav-strip.nav-open { position: absolute; top: 78px; left: 0; right: 0; display: block; box-shadow: 0 10px 18px rgba(10,35,27,.15); }
+  .nav-strip.nav-open { position: absolute; top: 68px; left: 0; right: 0; display: block; box-shadow: 0 10px 18px rgba(10,35,27,.15); }
   .nav-inner { min-height: auto; display: block; padding-block: 14px; }
   .nav-inner nav { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin: 11px 0 0; }
   .nav-inner nav a { padding: 10px 0; border-top: 1px solid #31594d; }
