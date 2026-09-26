@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" role="img" aria-labelledby="title">
+  <title id="title">Pexo Market</title>
+  <defs>
+    <linearGradient id="cart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7900"/>
+      <stop offset="1" stop-color="#f04400"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff43b"/>
+      <stop offset="1" stop-color="#ffb900"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="10"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".32"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+    <g stroke="#24100a" stroke-width="58">
+      <path d="M391 144 313 96q-35-22-58 10-23 32 14 56l111 70v242q0 24 24 24h296q22 0 31-22l79-190q11-27-19-27H393"/>
+      <path d="M394 292H285M394 356H247M394 420H208M394 484H170M414 497h269"/>
+      <path d="M469 270h291M465 355h260M442 440h245M548 271l-21 169m120-169-19 169m118-169-21 169"/>
+      <path d="M469 509v17m221-17v17"/>
+    </g>
+    <g stroke="url(#cart)" stroke-width="39">
+      <path d="M391 144 313 96q-35-22-58 10-23 32 14 56l111 70v242q0 24 24 24h296q22 0 31-22l79-190q11-27-19-27H393"/>
+      <path d="M394 292H285M394 356H247M394 420H208M394 484H170M414 497h269"/>
+      <path d="M469 270h291M465 355h260M442 440h245M548 271l-21 169m120-169-19 169m118-169-21 169"/>
+      <path d="M469 509v17m221-17v17"/>
+    </g>
+    <g fill="#fffdf7" stroke="#24100a" stroke-width="28">
+      <circle cx="465" cy="555" r="47"/>
+      <circle cx="690" cy="555" r="47"/>
+    </g>
+    <g fill="url(#cart)" stroke="url(#cart)" stroke-width="12">
+      <circle cx="465" cy="555" r="31"/>
+      <circle cx="690" cy="555" r="31"/>
+    </g>
+  </g>
+  <g filter="url(#shadow)" fill="url(#word)" stroke="#24100a" stroke-width="15" stroke-linejoin="round" paint-order="stroke fill" font-family="Manrope, Arial Black, sans-serif" font-weight="1000" text-anchor="middle">
+    <text x="512" y="664" font-size="130" letter-spacing="2">Pexo</text>
+    <text x="512" y="758" font-size="118" letter-spacing="2">Market</text>
+  </g>
+</svg>
