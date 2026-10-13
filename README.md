@@ -29,5 +29,6 @@ python manage.py check
 
 - SQLite is configured by default. `db.sqlite3` is created by migrations and is excluded from version control.
 - Set `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=false`, and `DJANGO_ALLOWED_HOSTS` in the deployment environment before production use. The built-in development key is not suitable for deployment.
+- Google sign-in requires `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` in the environment and a Google OAuth redirect URI of `http://127.0.0.1:8000/accounts/google/login/callback/` for local development. Do not commit OAuth credentials.
 - Checkout currently supports cash on delivery; it does not process online payments.
 - Product/category CRUD and order status management are available through Django admin.

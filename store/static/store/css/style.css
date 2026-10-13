@@ -277,6 +277,12 @@ h1, h2, h3, p { margin-top: 0; }
 .auth-panel > p { margin-bottom: 24px; color: var(--muted); font-size: 11px; }
 .stacked-form { display: grid; gap: 14px; }
 .stacked-form .button { margin-top: 3px; }
+.auth-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: var(--muted); font-size: 9px; text-transform: uppercase; }
+.auth-divider::before, .auth-divider::after { flex: 1; height: 1px; background: var(--line); content: ''; }
+.button-google { gap: 10px; border-color: #d7ddd4; background: white; color: var(--ink); }
+.button-google:hover { background: #fafbf8; }
+.button-google:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
+.button-google svg { width: 18px; height: 18px; }
 .auth-switch { margin: 17px 0 0 !important; font-size: 10px !important; }
 .auth-switch a { color: var(--forest); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .auth-aside { position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding: 40px; background: var(--forest); color: white; }

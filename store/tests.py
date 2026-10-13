@@ -70,8 +70,15 @@ class StoreFlowTests(TestCase):
         self.assertEqual(Review.objects.get(product=self.product, user=self.user).title, 'Still a favorite')
 
     def test_account_cart_checkout_and_order_templates_render(self):
-        self.assertEqual(self.client.get(reverse('store:login')).status_code, 200)
-        self.assertEqual(self.client.get(reverse('store:signup')).status_code, 200)
+        login_response = self.client.get(reverse('store:login'))
+        signup_response = self.client.get(reverse('store:signup'))
+
+        self.assertEqual(login_response.status_code, 200)
+        self.assertContains(login_response, 'Continue with Google')
+        self.assertContains(login_response, reverse('google_login'))
+        self.assertEqual(signup_response.status_code, 200)
+        self.assertContains(signup_response, 'Continue with Google')
+        self.assertContains(signup_response, reverse('google_login'))
         self.assertEqual(self.client.get(reverse('store:product_detail', args=[self.product.slug])).status_code, 200)
         self.assertEqual(self.client.get(reverse('store:cart')).status_code, 200)
 
